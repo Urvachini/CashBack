@@ -7,25 +7,39 @@ import static org.junit.Assert.assertEquals;
 
 public class CashbackHackServiceTest {
 
+
     @org.junit.Test
     public void shouldCalculateCashBackReal() {
         CashbackHackService service = new CashbackHackService();
         int amount = 2000;
 
         int actual = service.remain(amount);
-        int expected = 0;
+        int expected = 1000;
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
     }
 
+
     @org.junit.Test
-    public void shouldCalculateCashBackUnreal() {
+    public void shouldCalculateCashBackZero() {
         CashbackHackService service = new CashbackHackService();
-        int amount = 2000;
+        int amount = 0;
 
         int actual = service.remain(amount);
         int expected = 1000;
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
+    }
+
+
+    @org.junit.Test
+    public void shouldCalculateCashBackUnrealSeven() {
+        CashbackHackService service = new CashbackHackService();
+        int amount = 7;
+
+        int actual = service.remain(amount);
+        int expected = 993;
+
+        assertEquals(actual, expected);
     }
 }
