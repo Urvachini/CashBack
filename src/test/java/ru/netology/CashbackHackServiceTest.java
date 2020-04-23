@@ -12,18 +12,31 @@ public class CashbackHackServiceTest {
         int amount = 2000;
 
         int actual = service.remain(amount);
-        int expected = 0;
+        int expected = 1000;
 
         assertEquals(actual, expected);
     }
 
+
     @org.testng.annotations.Test
-    public void shouldCalculateCashBackUnreal() {
+    public void shouldCalculateCashBackZero() {
         CashbackHackService service = new CashbackHackService();
-        int amount = 2000;
+        int amount = 0;
 
         int actual = service.remain(amount);
         int expected = 1000;
+
+        assertEquals(actual, expected);
+    }
+
+
+    @org.testng.annotations.Test
+    public void shouldCalculateCashBackUnrealSeven() {
+        CashbackHackService service = new CashbackHackService();
+        int amount = 7;
+
+        int actual = service.remain(amount);
+        int expected = 993;
 
         assertEquals(actual, expected);
     }
