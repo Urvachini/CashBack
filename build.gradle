@@ -11,8 +11,6 @@ repositories {
 
 dependencies {
     testImplementation 'org.testng:testng:7.1.0'
-    compile group: 'gradle.plugin.name.remal', name: 'gradle-plugins', version: '1.0.24'
-
 }
 
 test {
