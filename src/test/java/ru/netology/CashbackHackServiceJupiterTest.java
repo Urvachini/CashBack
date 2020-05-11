@@ -10,7 +10,6 @@ public class CashbackHackServiceJupiterTest {
     public void shouldCalculateCashBackReal() {
         CashbackHackService  service = new CashbackHackService();
         int amount = 2000;
-
         int actual = service.remain(amount);
         int expected = 0;
 
